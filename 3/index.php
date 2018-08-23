@@ -17,7 +17,6 @@ require ("Dog.php");
 
 $dog = new Dog();
 $user = new User();
-
 $user->delegator = new VIPUser();   // 委托对象VIP用户
 echo "VIP用户狗的价格是:".$dog->getPrice() * $user->getVIPDiscount();
 echo "<br/>";
