@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><?php echo $this->State->roots->siteTitle; ?></title>
+</head>
+<body>
+<?php $this->State->configIterator('news', 'newsList'); ?>
+    <?php foreach($this->State as $news): ?>
+    <h2><?php echo $news['news_title']; ?></h2>
+    <p><?php echo $news['news_desc']; ?></p>
+    <hr/>
+    <?php endforeach; ?>
+</body>
+</html>
